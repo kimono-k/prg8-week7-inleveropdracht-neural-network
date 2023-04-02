@@ -1,5 +1,13 @@
 PRG8 - Week 7 - Inleveropdracht
 
+# Acknowledgements (Dutch)
+
+Als eerst wil ik mijn docent Erik Katerborg bedanken voor deze leuke en uitdagende opdracht.
+<br />
+train.html:
+<br />
+Hier kun je het Neural Network gaan trainen en daarna een voorspelling doen.
+
 # Uitleg
 
 - In de inleveropdracht heb ik een Neural Network getraind, zodat er een voorspelling van de prijs van een mobiele telefoon gemaakt kan worden op basis van de specs.
@@ -15,14 +23,6 @@ https://kimono-k.github.io/prg8-week7-inleveropdracht-neural-network/
 https://kimono-k.github.io/prg8-week7-inleveropdracht-neural-network/train.html
 <br />
 https://kimono-k.github.io/prg8-week7-inleveropdracht-neural-network/model-load.html
-
-# Acknowledgements (Dutch)
-
-Als eerst wil ik mijn docent Erik Katerborg bedanken voor deze leuke en uitdagende opdracht.
-<br />
-train.html:
-<br />
-Hier kun je het Neural Network gaan trainen en daarna een voorspelling doen.
 
 # File explanation (Dutch)
 
