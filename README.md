@@ -1,54 +1,40 @@
-# PRG8 - Week 7 - Inleveropdracht
+PRG8 - Week 7 - Inleveropdracht
 
-- Kies een CSV file uit de data map [geschikt voor regression]
-  - mobilephones.csv
-- Train het neural network met meerdere kolommen
-  - Mobile Phone PRICE bepalen aan de hand van de SPECS en RESOLUTION van een telefoon.
-  - PRICE AND SPECS ONLY FOR SCATTERPLOT
-- Bepaal hoeveel epochs en welke kolommen je nodig hebt
-  - epochs zo dicht mogelijk op 0 instellen
-- Sla het model op
+# Uitleg
 
-- Laad je model in een nieuwe HTML pagina, waarin je via een UI een voorspelling kan doen
-- Plaats je shit online, en vul feedbackfruits in.
+- In de inleveropdracht heb ik een Neural Network getraind, zodat er een voorspelling van de prijs van een mobiele telefoon gemaakt kan worden op basis van de specs.
 
-# CSV data
+# Gebruikte dataset
 
-- mobilephones.csv
+Ik heb met mobilephones.csv gewerkt.
 
-# Data voorbereiden
+# Live Demo
 
-gelukt---
+https://kimono-k.github.io/prg8-week7-inleveropdracht-neural-network/
+https://kimono-k.github.io/prg8-week7-inleveropdracht-neural-network/train.html
+https://kimono-k.github.io/prg8-week7-inleveropdracht-neural-network/model-load.html
 
-# Trainen met meerdere kolommen
+# Acknowledgements (Dutch)
 
-- meerdere kolommen:
-- price, specs, and resolution
+Als eerst wil ik mijn docent Erik Katerborg bedanken voor deze leuke en uitdagende opdracht.
+train.html: Hier kun je het Neural Network gaan trainen en daarna een voorspelling doen
 
-function checkData(data){
-// data voorbereiden
-data.sort(() => (Math.random() - 0.5))
-let trainData = data.slice(0, Math.floor(data.length _ 0.8))
-let testData = data.slice(Math.floor(data.length _ 0.8) + 1)
+# File explanation (Dutch)
 
-    // neural network aanmaken
-    nn = ml5.neuralNetwork({ task: 'regression', debug: true })
+index.html
 
-    // data toevoegen aan neural network
-    for(let car of trainData){
-        nn.addData({ horsepower: car.horsepower, weight: car.weight, cylinders:car.cylinders }, { mpg: car.mpg })
-    }
+- Een generieke pagina waar je naar de train pagina en model load pagina kan.
 
-}
+train.html:
 
-# Voorspelling doen met de testdata
+- Hier kun je het Neural Network gaan trainen en daarna een voorspelling doen.
 
-Om te kijken of het trainen goed is gegaan doe je een voorspelling met testdata. Let op dat je hierbij !!dezelfde kolommen gebruikt als bij het trainen!!.
+model-load.html:
 
-async function makePrediction() {
-const testCar = { horsepower: testData[0].horsepower, weight: testData[0].weight, cylinders:testData[0].cylinders }
-const pred = await nn.predict(testCar)
-console.log(pred[0].mpg)
-}
+- Hier kun je gelijk een voorspelling doen zonder dat je het Neural Network hoeft te trainen. De opgeslagen modellen worden hierbij ingeladen.
 
-Je kan voorspellingen van je testdata aan je scatterplot toevoegen door een x en y as te kiezen, bijvoorbeeld x = horsepower en y = mpg.
+# For people who want to get into machine learning (Dutch)
+
+Lijkt machine learning je wat? En wil je meer over mijn docent weten?
+Check dan zijn intro to ML5.js workshop door op het linkje te klikken!
+Intro to ML5.js with Erik Katerborg
