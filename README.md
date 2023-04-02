@@ -4,9 +4,12 @@ PRG8 - Week 7 - Inleveropdracht
 
 Als eerst wil ik mijn docent Erik Katerborg bedanken voor deze leuke en uitdagende opdracht.
 <br />
-train.html:
-<br />
-Hier kun je het Neural Network gaan trainen en daarna een voorspelling doen.
+
+Lijkt machine learning je wat? En wil je meer over mijn docent weten?
+Check dan zijn intro to ML5.js workshop door op het linkje te klikken!
+Intro to ML5.js with Erik Katerborg.
+
+https://www.youtube.com/watch?v=BRs1xouy-k4
 
 # Uitleg
 
@@ -37,11 +40,3 @@ train.html:
 model-load.html:
 
 - Hier kun je gelijk een voorspelling doen zonder dat je het Neural Network hoeft te trainen. De opgeslagen modellen worden hierbij ingeladen.
-
-# For people who want to get into machine learning (Dutch)
-
-Lijkt machine learning je wat? En wil je meer over mijn docent weten?
-Check dan zijn intro to ML5.js workshop door op het linkje te klikken!
-Intro to ML5.js with Erik Katerborg.
-
-https://www.youtube.com/watch?v=BRs1xouy-k4
