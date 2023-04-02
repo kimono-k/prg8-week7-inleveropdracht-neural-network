@@ -11,7 +11,9 @@ Ik heb met mobilephones.csv gewerkt.
 # Live Demo
 
 https://kimono-k.github.io/prg8-week7-inleveropdracht-neural-network/
+<br />
 https://kimono-k.github.io/prg8-week7-inleveropdracht-neural-network/train.html
+<br />
 https://kimono-k.github.io/prg8-week7-inleveropdracht-neural-network/model-load.html
 
 # Acknowledgements (Dutch)
