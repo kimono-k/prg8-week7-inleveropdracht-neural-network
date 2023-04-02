@@ -42,4 +42,7 @@ model-load.html:
 
 Lijkt machine learning je wat? En wil je meer over mijn docent weten?
 Check dan zijn intro to ML5.js workshop door op het linkje te klikken!
-Intro to ML5.js with Erik Katerborg
+Intro to ML5.js with Erik Katerborg.
+
+<br />
+https://www.youtube.com/watch?v=BRs1xouy-k4
