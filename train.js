@@ -5,21 +5,46 @@ import { createChart, updateChart } from "./scatterplot.js";
 let nn;
 
 // Getting DOM elements
-const predictButton = document.getElementById("btn");
-const inputField = document.getElementById("field");
+const weightInputField = document.getElementById("weight-input-field");
+const resoloutionInputField = document.getElementById(
+  "resoloution-input-field"
+);
+const ppiInputField = document.getElementById("ppi-input-field");
+const coresInputField = document.getElementById("cores-input-field");
+const predictButton = document.getElementById("prediction-btn");
+const saveButton = document.getElementById("save-btn");
 const resultDiv = document.getElementById("result");
 
 // Hide the elements on the first boot
-// inputField.style.display = "none";
-// predictButton.style.display = "none";
+predictButton.style.display = "none";
+saveButton.style.display = "none";
 
 /**
  * Fires the prediction and shows it in the viewport
  */
 predictButton.addEventListener("click", (e) => {
   e.preventDefault();
-  let inputFieldValue = document.getElementById("field").value;
-  makePrediction(+inputFieldValue);
+  let weightInputFieldValue =
+    document.getElementById("weight-input-field").value;
+  let resoloutionInputFieldValue = document.getElementById(
+    "resoloution-input-field"
+  ).value;
+  let ppiInputFieldValue = document.getElementById("ppi-input-field").value;
+  let coresInputFieldValue = document.getElementById("cores-input-field").value;
+  makePrediction(
+    +weightInputFieldValue,
+    +resoloutionInputFieldValue,
+    +ppiInputFieldValue,
+    +coresInputFieldValue
+  );
+});
+
+/**
+ * Save the trained model
+ */
+saveButton.addEventListener("click", (e) => {
+  e.preventDefault();
+  nn.save();
 });
 
 /**
@@ -126,16 +151,33 @@ async function finishedTraining(trainData = false, testData) {
   console.log("Finished training!");
 
   // Show the DOM elements after loading the scatterplot and neural network
-  inputField.style.display = "inline";
+  weightInputField.style.display = "inline";
+  resoloutionInputField.style.display = "inline";
+  ppiInputField.style.display = "inline";
+  coresInputField.style.display = "inline";
   predictButton.style.display = "inline";
+  saveButton.style.display = "inline";
 }
 
 /**
  * Creates a prediction of the price of a phone based on its specs
  */
-async function makePrediction(value) {
-  const results = await nn.predict({ price: testData[0] });
-  resultDiv.innerText = `Geschat verbruik: ${results[0].price}`;
+async function makePrediction(weight, resoloution, ppi, cores) {
+  if (weight && resoloution && ppi && cores) {
+    const results = await nn.predict(
+      {
+        weight: weight,
+        resoloution: resoloution,
+        ppi: ppi,
+        cores: cores,
+      },
+      () => console.log("Prediction successful!")
+    );
+    const priceTwoDecimals = results[0].price.toFixed(2);
+    resultDiv.innerText = `De prijs van de telefoon is €${priceTwoDecimals}`;
+  } else {
+    resultDiv.innerText = `Please fill in all the fields, numbskull!`;
+  }
 }
 
 loadData();
