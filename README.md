@@ -19,7 +19,10 @@ https://kimono-k.github.io/prg8-week7-inleveropdracht-neural-network/model-load.
 # Acknowledgements (Dutch)
 
 Als eerst wil ik mijn docent Erik Katerborg bedanken voor deze leuke en uitdagende opdracht.
-train.html: Hier kun je het Neural Network gaan trainen en daarna een voorspelling doen
+<br />
+train.html:
+<br />
+Hier kun je het Neural Network gaan trainen en daarna een voorspelling doen.
 
 # File explanation (Dutch)
 
